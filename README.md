@@ -1,2 +1,2 @@
-# mybatisplus
-mybatis-plus的使用demo
+# spring cloud feign
+spring cloud feign的demo
