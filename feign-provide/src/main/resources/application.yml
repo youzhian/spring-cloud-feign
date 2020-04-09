@@ -1,0 +1,13 @@
+server:
+  port: 8390
+spring:
+  application:
+    name: feign-provide-server
+eureka:
+  hostname: localhost
+  port: 8290
+  client:
+#    register-with-eureka: false
+#    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.hostname}:${eureka.port}/eureka/

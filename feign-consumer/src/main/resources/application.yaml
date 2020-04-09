@@ -1,0 +1,18 @@
+server:
+  port: 8490
+spring:
+  application:
+    name: feign-consumer-server
+eureka:
+  hostname: localhost
+  port: 8290
+  client:
+    service-url:
+      defaultZone: http://${eureka.hostname}:${eureka.port}/eureka/
+feign:
+  client:
+    config:
+      defualt:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
