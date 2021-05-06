@@ -1,0 +1,31 @@
+server:
+  port: 8590
+  servlet:
+    context-path: /gateway
+spring:
+  application:
+    name: feign-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: path_route
+          uri: http://www.ityouknow.com
+          predicates:
+            - Path=/spring-cloud
+        - id: baidu_route
+          uri: http://www.baidu.com
+          predicates:
+            - Path=/baidu/**
+          fillters:
+            - StringPrefix=1
+eureka:
+  hostname: localhost
+  port: 8290
+  client:
+#    register-with-eureka: false
+#    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.hostname}:${eureka.port}/eureka/
+logging:
+  level:
+    root: debug

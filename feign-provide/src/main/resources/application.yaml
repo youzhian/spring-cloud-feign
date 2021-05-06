@@ -1,5 +1,7 @@
 server:
-  port: 8390
+  port: 8391
+  servlet:
+    context-path: /provide
 spring:
   application:
     name: feign-provide-server
@@ -11,3 +13,6 @@ eureka:
 #    fetch-registry: false
     service-url:
       defaultZone: http://${eureka.hostname}:${eureka.port}/eureka/
+logging:
+  level:
+    root: debug

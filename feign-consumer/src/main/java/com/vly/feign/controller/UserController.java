@@ -1,7 +1,8 @@
 package com.vly.feign.controller;
 
-import com.vly.feign.service.UserService;
+import com.vly.feign.client.UserClient;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,9 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     @Autowired
-    private UserService userService;
+    private UserClient userService;
 
-    @RequestMapping("sayHi")
+    @GetMapping("sayHi")
     public String sayHi(String name){
         String result = userService.sayHi(name);
         return result;
