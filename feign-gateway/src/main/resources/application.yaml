@@ -18,6 +18,10 @@ spring:
             - Path=/baidu/**
           fillters:
             - StringPrefix=1
+        - id: consumer_route
+          uri: lb://feign-consumer-server
+          predicates:
+            - Path=/consumer/**
 eureka:
   hostname: localhost
   port: 8290
