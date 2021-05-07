@@ -9,8 +9,8 @@ eureka:
   hostname: localhost
   port: 8290
   client:
-#    register-with-eureka: false
-#    fetch-registry: false
+    register-with-eureka: false
+    fetch-registry: false
     service-url:
       defaultZone: http://${eureka.hostname}:${eureka.port}/eureka/
 logging:
