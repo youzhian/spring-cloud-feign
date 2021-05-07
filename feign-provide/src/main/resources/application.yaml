@@ -1,5 +1,5 @@
 server:
-  port: 8391
+  port: 8390
   servlet:
     context-path: /provide
 spring:
@@ -9,8 +9,8 @@ eureka:
   hostname: localhost
   port: 8290
   client:
-    register-with-eureka: false
-    fetch-registry: false
+#    register-with-eureka: true
+#    fetch-registry: false
     service-url:
       defaultZone: http://${eureka.hostname}:${eureka.port}/eureka/
 logging:

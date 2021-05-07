@@ -27,7 +27,7 @@ eureka:
   port: 8290
   client:
     register-with-eureka: false
-    fetch-registry: false
+#    fetch-registry: false
     service-url:
       defaultZone: http://${eureka.hostname}:${eureka.port}/eureka/
 logging:
